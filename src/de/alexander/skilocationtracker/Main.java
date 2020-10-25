@@ -1,7 +1,5 @@
 package de.alexander.skilocationtracker;
 
-import de.alexander.skilocationtracker.locations.Wieden;
-
 /**
  * Main class for the application
  *
