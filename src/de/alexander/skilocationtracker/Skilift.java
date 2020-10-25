@@ -53,6 +53,7 @@ public class Skilift implements SkiliftInterface {
 
     @Override
     public String toString() {
+
         return "Skilift{" +
                 "name='" + name + '\'' +
                 ", type='" + type + '\'' +

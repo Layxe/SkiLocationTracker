@@ -1,5 +1,7 @@
 package de.alexander.skilocationtracker;
 
+import de.alexander.skilocationtracker.locations.Schnalstal;
+
 /**
  * Main class for the application
  *
@@ -9,6 +11,8 @@ package de.alexander.skilocationtracker;
 public class Main {
 
     public static void main(String[] args) {
+
+        System.out.println(new Schnalstal().getMaxAmountOfOpenSkiLifts());
 
     }
 

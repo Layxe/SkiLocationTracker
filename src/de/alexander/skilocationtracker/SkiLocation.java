@@ -102,6 +102,7 @@ public abstract class SkiLocation implements SkiLocationInterface {
 
     @Override
     public String toString() {
+
         return "SkiLocation{" +
                 "name='" + name + '\'' +
                 ", skilifts=" + skilifts +
