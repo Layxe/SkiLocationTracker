@@ -5,18 +5,26 @@ import de.alexander.skilocationtracker.util.GetRequest;
 import java.util.ArrayList;
 
 /**
- * AbstractSkiLocation
+ * SkiLocation
  *
  * @author Alexander Niedermayer
  * @version 1.0
  */
 public abstract class SkiLocation implements SkiLocationInterface {
 
+    // Variables
+    // #################################################################################################
+
     /**
      * Web address for the data scraping
      */
 
     private final String webAddress;
+
+    /**
+     * Name of ski location
+     */
+
     private final String name;
 
     /**
@@ -27,6 +35,9 @@ public abstract class SkiLocation implements SkiLocationInterface {
 
     private int currentlyOpen = -1;
 
+    // Constructor
+    // #################################################################################################
+
     public SkiLocation(String name, String webAddress) {
 
         this.name = name;
@@ -34,6 +45,9 @@ public abstract class SkiLocation implements SkiLocationInterface {
         this.processHTML(getSiteBody());
 
     }
+
+    // Getter
+    // #################################################################################################
 
     @Override
     public int getAmountOfOpenSkiLifts() {

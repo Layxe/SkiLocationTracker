@@ -37,7 +37,7 @@ public interface SkiLocationInterface {
     String getName();
 
     /**
-     * Process the HTML of the page
+     * Process the HTML of the page, add the resulting skilifts in the skilifts array
      * @param body HTML Body
      */
 

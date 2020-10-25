@@ -1,16 +1,22 @@
 package de.alexander.skilocationtracker;
 
 /**
- * AbstractSkilift
+ * Skilift
  *
  * @author Alexander Niedermayer
  * @version 1.0
  */
 public class Skilift implements SkiliftInterface {
 
+    // Variables
+    // #################################################################################################
+
     private final String name;
     private final String type;
     private boolean open;
+
+    // Constructor
+    // #################################################################################################
 
     /**
      * Create a new skilift
@@ -26,6 +32,9 @@ public class Skilift implements SkiliftInterface {
         this.open = open;
 
     }
+
+    // Getter
+    // #################################################################################################
 
     @Override
     public String getName() {
