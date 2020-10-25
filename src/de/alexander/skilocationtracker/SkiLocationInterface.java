@@ -40,9 +40,22 @@ public interface SkiLocationInterface {
 
     /**
      * Process the HTML of the page, add the resulting skilifts in the skilifts array
-     * @param body HTML Body
+     * @param doc HTML Doc Body
      */
 
     void processHTML(Document doc);
+
+    /**
+     * Fetch the data of the ski location
+     */
+
+    void fetchData();
+
+    /**
+     * Returns if the fetching is completed
+     * @return true if completed
+     */
+
+    boolean finishedFetching();
 
 }

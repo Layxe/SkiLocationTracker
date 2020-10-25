@@ -35,6 +35,7 @@ public abstract class SkiLocation implements SkiLocationInterface {
     protected ArrayList<Skilift> skilifts = new ArrayList<>();
 
     private int currentlyOpen = -1;
+    private boolean finishedFetching = false;
 
     // Constructor
     // #################################################################################################
@@ -43,12 +44,29 @@ public abstract class SkiLocation implements SkiLocationInterface {
 
         this.name = name;
         this.webAddress = webAddress;
+
+    }
+
+    // Methoden
+    // #################################################################################################
+
+    @Override
+    public void fetchData() {
+
         this.processHTML(Jsoup.parse(getSiteBody()));
+
+        this.finishedFetching = true;
 
     }
 
     // Getter
     // #################################################################################################
+
+
+    @Override
+    public boolean finishedFetching() {
+        return this.finishedFetching;
+    }
 
     @Override
     public int getAmountOfOpenSkiLifts() {
