@@ -7,33 +7,34 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
- * Feldberg
- * Class for collecting data of the Feldberg ski location
+ * Wieden
+ *
  * @author Alexander Niedermayer
  * @version 1.0
  */
-
 @SuppressWarnings("SpellCheckingInspection")
-public class Feldberg extends SkiLocation {
+public class Wieden extends SkiLocation {
 
-    private final String openSource = "/extension/lissnowreport/design/standard/images/lissnowreport_icon-1.png";
+    private final String openSource = "https://www.skilifte-muenstertal-wieden.de/oeffnungszeiten/betriebein.gif";
 
-    public Feldberg() {
-        super("Feldberg", "https://www.liftverbund-feldberg.de/Schneebericht/Schneebericht-Liftverbund-Feldberg");
+    public Wieden() {
+        super("Wieden", "https://www.skilifte-muenstertal-wieden.de/preise-oeffungszeiten.php");
     }
 
     @Override
     public void processHTML(Document doc) {
 
-        Elements tableEntries = doc.select("#lifte > table > tbody > tr");
+        Elements tableEntries = doc.select(".table").get(0).select("tbody > tr");
+
+        System.out.println(doc.select("body"));
 
         for (Element tableEntry : tableEntries) {
 
             Elements tableData = tableEntry.select("td");
 
-            String openImage = tableData.get(0).child(0).attr("src");
-            String name      = tableData.get(1).text();
-            String type      = tableData.get(2).text();
+            String name      = tableData.get(0).text();
+            String type      = "2er Schlepplift";
+            String openImage = tableData.get(2).child(0).attr("src");
 
             boolean open = false;
 
@@ -42,6 +43,7 @@ public class Feldberg extends SkiLocation {
             }
 
             skilifts.add(new Skilift(name, type, open));
+
 
         }
 

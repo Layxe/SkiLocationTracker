@@ -82,7 +82,7 @@ public abstract class SkiLocation implements SkiLocationInterface {
 
     @Override
     public boolean isOpen() {
-        return false;
+        return getAmountOfOpenSkiLifts() > 0;
     }
 
     /**

@@ -1,6 +1,6 @@
 package de.alexander.skilocationtracker;
 
-import de.alexander.skilocationtracker.locations.Feldberg;
+import de.alexander.skilocationtracker.locations.Wieden;
 
 /**
  * Main class for the application
@@ -11,6 +11,8 @@ import de.alexander.skilocationtracker.locations.Feldberg;
 public class Main {
 
     public static void main(String[] args) {
+
+        System.out.println(new Wieden().toString());
 
     }
 
