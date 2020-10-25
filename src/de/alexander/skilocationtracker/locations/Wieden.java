@@ -26,8 +26,6 @@ public class Wieden extends SkiLocation {
 
         Elements tableEntries = doc.select(".table").get(0).select("tbody > tr");
 
-        System.out.println(doc.select("body"));
-
         for (Element tableEntry : tableEntries) {
 
             Elements tableData = tableEntry.select("td");
