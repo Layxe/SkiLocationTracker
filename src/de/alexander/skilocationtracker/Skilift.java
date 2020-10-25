@@ -51,4 +51,12 @@ public class Skilift implements SkiliftInterface {
         return this.open;
     }
 
+    @Override
+    public String toString() {
+        return "Skilift{" +
+                "name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", open=" + open +
+                '}';
+    }
 }

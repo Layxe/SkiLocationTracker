@@ -1,5 +1,7 @@
 package de.alexander.skilocationtracker;
 
+import de.alexander.skilocationtracker.locations.Feldberg;
+
 /**
  * Main class for the application
  *
@@ -9,8 +11,6 @@ package de.alexander.skilocationtracker;
 public class Main {
 
     public static void main(String[] args) {
-
-        // TODO Everything
 
     }
 

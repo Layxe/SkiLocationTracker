@@ -1,5 +1,7 @@
 package de.alexander.skilocationtracker;
 
+import org.jsoup.nodes.Document;
+
 /**
  * Interface for every ski location that will be implemented
  *
@@ -41,6 +43,6 @@ public interface SkiLocationInterface {
      * @param body HTML Body
      */
 
-    void processHTML(String body);
+    void processHTML(Document doc);
 
 }

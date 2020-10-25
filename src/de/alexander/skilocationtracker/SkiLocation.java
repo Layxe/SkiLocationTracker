@@ -1,6 +1,7 @@
 package de.alexander.skilocationtracker;
 
 import de.alexander.skilocationtracker.util.GetRequest;
+import org.jsoup.Jsoup;
 
 import java.util.ArrayList;
 
@@ -31,7 +32,7 @@ public abstract class SkiLocation implements SkiLocationInterface {
      * List of ski lifts available in the location
      */
 
-    private ArrayList<Skilift> skilifts = new ArrayList<>();
+    protected ArrayList<Skilift> skilifts = new ArrayList<>();
 
     private int currentlyOpen = -1;
 
@@ -42,7 +43,7 @@ public abstract class SkiLocation implements SkiLocationInterface {
 
         this.name = name;
         this.webAddress = webAddress;
-        this.processHTML(getSiteBody());
+        this.processHTML(Jsoup.parse(getSiteBody()));
 
     }
 
@@ -99,4 +100,11 @@ public abstract class SkiLocation implements SkiLocationInterface {
         return this.name;
     }
 
+    @Override
+    public String toString() {
+        return "SkiLocation{" +
+                "name='" + name + '\'' +
+                ", skilifts=" + skilifts +
+                '}';
+    }
 }
